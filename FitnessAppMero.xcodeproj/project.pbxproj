@@ -16,6 +16,7 @@
 		C39568852C4E677900564DEC /* FitnessTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39568842C4E677900564DEC /* FitnessTabView.swift */; };
 		C39568872C4E6B9000564DEC /* ProgressCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39568862C4E6B9000564DEC /* ProgressCircleView.swift */; };
 		C395688A2C4E71DD00564DEC /* ActivityCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39568892C4E71DD00564DEC /* ActivityCard.swift */; };
+		C395688C2C4E796700564DEC /* WorkoutCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C395688B2C4E796700564DEC /* WorkoutCard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		C39568842C4E677900564DEC /* FitnessTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessTabView.swift; sourceTree = "<group>"; };
 		C39568862C4E6B9000564DEC /* ProgressCircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressCircleView.swift; sourceTree = "<group>"; };
 		C39568892C4E71DD00564DEC /* ActivityCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityCard.swift; sourceTree = "<group>"; };
+		C395688B2C4E796700564DEC /* WorkoutCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutCard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 				C39568802C4E675100564DEC /* HomeView.swift */,
 				C39568862C4E6B9000564DEC /* ProgressCircleView.swift */,
 				C39568892C4E71DD00564DEC /* ActivityCard.swift */,
+				C395688B2C4E796700564DEC /* WorkoutCard.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -161,6 +164,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C39568852C4E677900564DEC /* FitnessTabView.swift in Sources */,
+				C395688C2C4E796700564DEC /* WorkoutCard.swift in Sources */,
 				C39568872C4E6B9000564DEC /* ProgressCircleView.swift in Sources */,
 				C39568812C4E675100564DEC /* HomeView.swift in Sources */,
 				C39568752C4D30AC00564DEC /* ContentView.swift in Sources */,
