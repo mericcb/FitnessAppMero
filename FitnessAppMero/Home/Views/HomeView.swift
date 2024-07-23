@@ -43,7 +43,7 @@ struct HomeView: View {
                                     .bold()
                                     .foregroundStyle(.green)
                                 
-                                Text("\(viewModel.active)")
+                                Text("\(viewModel.exercise)")
                                     .bold()
                             }
                             .padding(.bottom)
@@ -62,9 +62,10 @@ struct HomeView: View {
                         Spacer()
                         
                         ZStack {
-                            ProgressCircleView(progress: $viewModel.calories, goal: 600, color: .red)
+                            ProgressCircleView(progress: $viewModel.calories, goal: 1000, color: .red)
+
                             
-                            ProgressCircleView(progress: $viewModel.active, goal: 60, color: .green)
+                            ProgressCircleView(progress: $viewModel.exercise, goal: 60, color: .green)
                                 .padding(.all, 20)
                             
                             ProgressCircleView(progress: $viewModel.stand, goal: 12, color: .blue)
@@ -96,13 +97,15 @@ struct HomeView: View {
                     }
                     .padding(.horizontal)
                     
-                    LazyVGrid(columns: Array(repeating: GridItem(spacing: 20), count: 2), content: {
-                        ForEach(viewModel.mockActivities, id: \.id) { activity in
-                            ActivityCard(activity: activity)
-                        }
-                        
-                    })
-                    .padding(.horizontal)
+                    if !viewModel.activities.isEmpty {
+                        LazyVGrid(columns: Array(repeating: GridItem(spacing: 20), count: 2), content: {
+                            ForEach(viewModel.activities, id: \.title) { activity in
+                                ActivityCard(activity: activity)
+                            }
+                            
+                        })
+                        .padding(.horizontal)
+                    }
                     
                     HStack {
                         Text("Recent Workouts")
