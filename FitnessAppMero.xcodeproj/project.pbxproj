@@ -21,6 +21,7 @@
 		C39568932C4EC91C00564DEC /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39568922C4EC91C00564DEC /* Activity.swift */; };
 		C39568952C4EC94000564DEC /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39568942C4EC94000564DEC /* Workout.swift */; };
 		C39568992C4ED10300564DEC /* HealthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39568982C4ED10300564DEC /* HealthManager.swift */; };
+		C395689C2C4FF35600564DEC /* HKWorkoutActivityType+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = C395689B2C4FF35600564DEC /* HKWorkoutActivityType+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		C39568942C4EC94000564DEC /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		C39568962C4ECE4A00564DEC /* FitnessAppMero.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FitnessAppMero.entitlements; sourceTree = "<group>"; };
 		C39568982C4ED10300564DEC /* HealthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthManager.swift; sourceTree = "<group>"; };
+		C395689B2C4FF35600564DEC /* HKWorkoutActivityType+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HKWorkoutActivityType+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 		C39568712C4D30AC00564DEC /* FitnessAppMero */ = {
 			isa = PBXGroup;
 			children = (
+				C395689A2C4FF31F00564DEC /* Utils */,
 				C39568972C4ED0D900564DEC /* Managers */,
 				C39568882C4E71A200564DEC /* Home */,
 				C39568962C4ECE4A00564DEC /* FitnessAppMero.entitlements */,
@@ -137,6 +140,14 @@
 				C39568982C4ED10300564DEC /* HealthManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		C395689A2C4FF31F00564DEC /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C395689B2C4FF35600564DEC /* HKWorkoutActivityType+Ext.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,6 +226,7 @@
 				C395688C2C4E796700564DEC /* WorkoutCard.swift in Sources */,
 				C39568872C4E6B9000564DEC /* ProgressCircleView.swift in Sources */,
 				C39568812C4E675100564DEC /* HomeView.swift in Sources */,
+				C395689C2C4FF35600564DEC /* HKWorkoutActivityType+Ext.swift in Sources */,
 				C39568952C4EC94000564DEC /* Workout.swift in Sources */,
 				C39568992C4ED10300564DEC /* HealthManager.swift in Sources */,
 				C39568752C4D30AC00564DEC /* ContentView.swift in Sources */,
