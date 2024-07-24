@@ -86,7 +86,7 @@ class HealthManager {
         let predicate = HKQuery.predicateForSamples(withStart: .startOfDay, end: Date())
         let query = HKStatisticsQuery(quantityType: calories, quantitySamplePredicate: predicate) { _, results, error in
             guard let quantity = results?.sumQuantity(), error == nil else {
-                completion(.failure(URLError(.badURL)))
+                completion(.failure(error ?? URLError(.badURL)))
                 return
             }
             
@@ -102,7 +102,7 @@ class HealthManager {
         let predicate = HKQuery.predicateForSamples(withStart: .startOfDay, end: Date())
         let query = HKStatisticsQuery(quantityType: exercise, quantitySamplePredicate: predicate) { _, results, error in
             guard let quantity = results?.sumQuantity(), error == nil else {
-                completion(.failure(URLError(.badURL)))
+                completion(.failure(error ?? URLError(.badURL)))
                 return
             }
             let exerciseTime = quantity.doubleValue(for: .minute())
@@ -118,7 +118,7 @@ class HealthManager {
         let predicate = HKQuery.predicateForSamples(withStart: .startOfDay, end: Date())
         let query = HKSampleQuery(sampleType: stand, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: nil) { _, results, error in
             guard let samples = results as? [HKCategorySample], error == nil else {
-                completion(.failure(URLError(.badURL)))
+                completion(.failure(error ?? URLError(.badURL)))
                 return
             }
             

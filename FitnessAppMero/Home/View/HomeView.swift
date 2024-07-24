@@ -43,7 +43,7 @@ struct HomeView: View {
                                     .bold()
                                     .foregroundStyle(.green)
                                 
-                                Text("\(viewModel.exercise)")
+                                Text("\(viewModel.exercise) mins")
                                     .bold()
                             }
                             .padding(.bottom)
