@@ -46,23 +46,28 @@ class ChartViewModel: ObservableObject {
     @Published var threeMonthAverage = 0
     @Published var threeMonthTotal = 0
     
+    @Published var ytdChartData = [MonthlyStepModel]()
     @Published var ytdAverage = 0
     @Published var ytdTotal = 0
     
+    @Published var oneYearChartData = [MonthlyStepModel]()
     @Published var oneYearAverage = 0
     @Published var oneYearTotal = 0
     
-    
+    let healthManager = HealthManager.shared
     
     
     init() {
-        var mockOneMonth = mockDataForDays(days: 30)
-        var mockThreeMonth = mockDataForDays(days: 90)
+        let mockOneMonth = mockDataForDays(days: 30)
+        let mockThreeMonth = mockDataForDays(days: 90)
         
         DispatchQueue.main.async {
             self.mockOneMonthData = mockOneMonth
             self.mockThreeMonthData = mockThreeMonth
         }
+        
+        fetchYTDAndOneYearChartData()
+
         
         
     }
@@ -78,5 +83,26 @@ class ChartViewModel: ObservableObject {
         }
         return mockData
     }
+    
+    func fetchYTDAndOneYearChartData() {
+        healthManager.fetchYTDAndOneYearData { result in
+            switch result {
+            case .success(let result):
+                DispatchQueue.main.async {
+                    self.ytdChartData = result.ytd
+                    self.oneYearChartData = result.oneYear
+                    
+                    self.ytdTotal = self.ytdChartData.reduce(0, { $0 + $1.count })
+                    self.oneYearTotal = self.oneYearChartData.reduce(0, { $0 + $1.count })
+                    
+                    self.ytdAverage = self.ytdTotal / Calendar.current.component(.month, from: Date())
+                    self.oneYearAverage = self.oneYearTotal / 12
+                }
+            case.failure(let failure):
+                print(failure.localizedDescription)
+            }
+        }
+    }
+    
     
 }
