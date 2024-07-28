@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		C393B6EF2C5687C600B048AD /* PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C393B6EE2C5687C600B048AD /* PaywallViewModel.swift */; };
+		C393B6F52C56AFB400B048AD /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C393B6F42C56AFB400B048AD /* LeaderboardView.swift */; };
+		C393B6F72C56B51300B048AD /* TermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C393B6F62C56B51300B048AD /* TermsView.swift */; };
 		C39568732C4D30AC00564DEC /* FitnessAppMeroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39568722C4D30AC00564DEC /* FitnessAppMeroApp.swift */; };
 		C39568752C4D30AC00564DEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39568742C4D30AC00564DEC /* ContentView.swift */; };
 		C39568772C4D30AE00564DEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39568762C4D30AE00564DEC /* Assets.xcassets */; };
@@ -36,6 +38,8 @@
 
 /* Begin PBXFileReference section */
 		C393B6EE2C5687C600B048AD /* PaywallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallViewModel.swift; sourceTree = "<group>"; };
+		C393B6F42C56AFB400B048AD /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
+		C393B6F62C56B51300B048AD /* TermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsView.swift; sourceTree = "<group>"; };
 		C395686F2C4D30AC00564DEC /* FitnessAppMero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessAppMero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C39568722C4D30AC00564DEC /* FitnessAppMeroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessAppMeroApp.swift; sourceTree = "<group>"; };
 		C39568742C4D30AC00564DEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -76,6 +80,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C393B6F02C56AF7000B048AD /* Leaderboards */ = {
+			isa = PBXGroup;
+			children = (
+				C393B6F32C56AF9800B048AD /* ViewModel */,
+				C393B6F22C56AF9000B048AD /* Model */,
+				C393B6F12C56AF8100B048AD /* View */,
+			);
+			path = Leaderboards;
+			sourceTree = "<group>";
+		};
+		C393B6F12C56AF8100B048AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C393B6F42C56AFB400B048AD /* LeaderboardView.swift */,
+				C393B6F62C56B51300B048AD /* TermsView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		C393B6F22C56AF9000B048AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C393B6F32C56AF9800B048AD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		C39568662C4D30AC00564DEC = {
 			isa = PBXGroup;
 			children = (
@@ -96,6 +133,7 @@
 		C39568712C4D30AC00564DEC /* FitnessAppMero */ = {
 			isa = PBXGroup;
 			children = (
+				C393B6F02C56AF7000B048AD /* Leaderboards */,
 				C395689F2C51AB9C00564DEC /* Charts */,
 				C395689A2C4FF31F00564DEC /* Utils */,
 				C39568972C4ED0D900564DEC /* Managers */,
@@ -306,6 +344,8 @@
 				C39568812C4E675100564DEC /* HomeView.swift in Sources */,
 				C395689C2C4FF35600564DEC /* HKWorkoutActivityType+Ext.swift in Sources */,
 				C39568952C4EC94000564DEC /* Workout.swift in Sources */,
+				C393B6F72C56B51300B048AD /* TermsView.swift in Sources */,
+				C393B6F52C56AFB400B048AD /* LeaderboardView.swift in Sources */,
 				C3AC94702C53D16700166084 /* PaywallView.swift in Sources */,
 				C39568992C4ED10300564DEC /* HealthManager.swift in Sources */,
 				C39568752C4D30AC00564DEC /* ContentView.swift in Sources */,

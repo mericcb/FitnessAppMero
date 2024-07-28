@@ -9,8 +9,10 @@ import SwiftUI
 import RevenueCat
 
 struct FitnessTabView: View {
+    @AppStorage("username") var username: String?
     @State var selectedTab = "Home"
     @State var isPremium = false
+    @State var showTerms = true
     
     init() {
         let appearence = UITabBarAppearance()
@@ -40,9 +42,18 @@ struct FitnessTabView: View {
                     Text("Charts")
                 }
             
+            LeaderboardView(showTerms: $showTerms)
+                .tag("Leaderboard")
+                .tabItem {
+                    Image(systemName: "list.bullet")
+                    
+                    Text("Leaderboard")
+                }
+            
             
         }
         .onAppear {
+            showTerms = username == nil
             Purchases.shared.getCustomerInfo { customerInfo, error in
                 isPremium = customerInfo?.entitlements["premium"]?.isActive == true
             }
