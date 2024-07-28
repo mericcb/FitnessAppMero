@@ -13,7 +13,7 @@ struct FitnessAppMeroApp: App {
     
     init () {
         Purchases.logLevel = .debug
-        Purchases.configure(withAPIKey: "appl_aNmFPckdbaNfHJssvwTTetbhIxr")
+        Purchases.configure(withAPIKey: "appl_tccZDFgeHLBVqoOIQscIKESpCHQ")
         
     }
     

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C393B6EF2C5687C600B048AD /* PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C393B6EE2C5687C600B048AD /* PaywallViewModel.swift */; };
 		C39568732C4D30AC00564DEC /* FitnessAppMeroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39568722C4D30AC00564DEC /* FitnessAppMeroApp.swift */; };
 		C39568752C4D30AC00564DEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39568742C4D30AC00564DEC /* ContentView.swift */; };
 		C39568772C4D30AE00564DEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39568762C4D30AE00564DEC /* Assets.xcassets */; };
@@ -30,9 +31,11 @@
 		C3AC94692C53BC7700166084 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3AC94682C53BC7700166084 /* StoreKit.framework */; };
 		C3AC946C2C53CB0900166084 /* RevenueCat in Frameworks */ = {isa = PBXBuildFile; productRef = C3AC946B2C53CB0900166084 /* RevenueCat */; };
 		C3AC946E2C53CB0900166084 /* RevenueCatUI in Frameworks */ = {isa = PBXBuildFile; productRef = C3AC946D2C53CB0900166084 /* RevenueCatUI */; };
+		C3AC94702C53D16700166084 /* PaywallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3AC946F2C53D16700166084 /* PaywallView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C393B6EE2C5687C600B048AD /* PaywallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallViewModel.swift; sourceTree = "<group>"; };
 		C395686F2C4D30AC00564DEC /* FitnessAppMero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessAppMero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C39568722C4D30AC00564DEC /* FitnessAppMeroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessAppMeroApp.swift; sourceTree = "<group>"; };
 		C39568742C4D30AC00564DEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +59,7 @@
 		C39568A92C5295AC00564DEC /* MonthlyStepModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthlyStepModel.swift; sourceTree = "<group>"; };
 		C39568AB2C52966C00564DEC /* ChartOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartOptions.swift; sourceTree = "<group>"; };
 		C3AC94682C53BC7700166084 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		C3AC946F2C53D16700166084 /* PaywallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +111,10 @@
 		C39568782C4D30AE00564DEC /* Preview Content */ = {
 			isa = PBXGroup;
 			children = (
+				C39568842C4E677900564DEC /* FitnessTabView.swift */,
 				C39568792C4D30AE00564DEC /* Preview Assets.xcassets */,
+				C3AC946F2C53D16700166084 /* PaywallView.swift */,
+				C393B6EE2C5687C600B048AD /* PaywallViewModel.swift */,
 			);
 			path = "Preview Content";
 			sourceTree = "<group>";
@@ -143,7 +150,6 @@
 			isa = PBXGroup;
 			children = (
 				C39568802C4E675100564DEC /* HomeView.swift */,
-				C39568842C4E677900564DEC /* FitnessTabView.swift */,
 				C39568862C4E6B9000564DEC /* ProgressCircleView.swift */,
 				C395688B2C4E796700564DEC /* WorkoutCard.swift */,
 				C39568892C4E71DD00564DEC /* ActivityCard.swift */,
@@ -300,10 +306,12 @@
 				C39568812C4E675100564DEC /* HomeView.swift in Sources */,
 				C395689C2C4FF35600564DEC /* HKWorkoutActivityType+Ext.swift in Sources */,
 				C39568952C4EC94000564DEC /* Workout.swift in Sources */,
+				C3AC94702C53D16700166084 /* PaywallView.swift in Sources */,
 				C39568992C4ED10300564DEC /* HealthManager.swift in Sources */,
 				C39568752C4D30AC00564DEC /* ContentView.swift in Sources */,
 				C39568732C4D30AC00564DEC /* FitnessAppMeroApp.swift in Sources */,
 				C39568AC2C52966D00564DEC /* ChartOptions.swift in Sources */,
+				C393B6EF2C5687C600B048AD /* PaywallViewModel.swift in Sources */,
 				C395688A2C4E71DD00564DEC /* ActivityCard.swift in Sources */,
 				C39568832C4E676200564DEC /* ChartView.swift in Sources */,
 				C39568AA2C5295AC00564DEC /* MonthlyStepModel.swift in Sources */,
