@@ -12,6 +12,7 @@ import RevenueCat
 struct PaywallView: View {
     @Environment(\.dismiss) var dismiss
     @StateObject var viewModel = PaywallViewModel()
+    @Binding var isPremium: Bool
     
     var body: some View {
         VStack(spacing: 16) {
@@ -55,10 +56,13 @@ struct PaywallView: View {
                 if let offering = viewModel.currenOffering {
                     ForEach(offering.availablePackages) { package in
                         Button{
-                            Purchases.shared.purchase(package: package) { (transaction, customerInfo, error, userCancelled) in
-                                if customerInfo?.entitlements["premium"]?.isActive == true {
-                                    // Unlock that great "pro" content
+                            Task {
+                                do {
+                                    try await viewModel.purchase(package: package)
+                                    isPremium = true
                                     dismiss()
+                                }catch {
+                                    print(error.localizedDescription)
                                 }
                             }
                         } label: {
@@ -87,9 +91,12 @@ struct PaywallView: View {
             
             
             Button {
-                Purchases.shared.restorePurchases { customerInfo, error in
-                    if customerInfo?.entitlements["premium"]?.isActive == true {
+                Task {
+                    do {
+                        try await viewModel.restorePurchases()
                         dismiss()
+                    }catch {
+                        print(error.localizedDescription)
                     }
                 }
             } label: {
@@ -109,9 +116,10 @@ struct PaywallView: View {
             
         }
         .frame(maxHeight: .infinity, alignment: .top)
+        .padding(.top)
     }
 }
 
 #Preview {
-    PaywallView()
+    PaywallView(isPremium: .constant(false))
 }

@@ -9,8 +9,9 @@ import SwiftUI
 
 struct HomeView: View {
     
-    @ObservedObject var viewModel = HomeViewModel()
-    
+    @StateObject var viewModel = HomeViewModel()
+    @Binding var isPremium: Bool
+    @State var showPaywall = false
     
     var body: some View {
         NavigationStack {
@@ -85,8 +86,12 @@ struct HomeView: View {
                         Spacer()
                         
                         
-                        NavigationLink {
-                            EmptyView()
+                        Button {
+                            if isPremium {
+                                
+                            } else {
+                                showPaywall = true
+                            }
                         } label: {
                             Text("Show more")
                                 .padding(.all, 10)
@@ -114,14 +119,26 @@ struct HomeView: View {
                         Spacer()
                         
                         
-                        NavigationLink {
-                            EmptyView()
-                        } label: {
-                            Text("Show more")
-                                .padding(.all, 10)
-                                .foregroundStyle(.white)
-                                .background(.blue)
-                                .cornerRadius(20)
+                        if isPremium {
+                            NavigationLink {
+                                EmptyView()
+                            } label: {
+                                Text("Show more")
+                                    .padding(.all, 10)
+                                    .foregroundStyle(.white)
+                                    .background(.blue)
+                                    .cornerRadius(20)
+                            }
+                        } else {
+                            Button {
+                                showPaywall = true
+                            } label: {
+                                Text("Show more")
+                                    .padding(.all, 10)
+                                    .foregroundStyle(.white)
+                                    .background(.blue)
+                                    .cornerRadius(20)
+                            }
                         }
                     }
                     .padding(.horizontal)
@@ -138,9 +155,12 @@ struct HomeView: View {
                 }
             }
         }
+        .sheet(isPresented: $showPaywall) {
+            PaywallView(isPremium: $isPremium)
+        }
     }
 }
 
 #Preview {
-    HomeView()
+    HomeView(isPremium: .constant(false))
 }
