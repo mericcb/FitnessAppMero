@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyDoXXFah8ivWBRGtwKG-Gnw3iP5knkJ2u8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>196142343735</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.mericcembaysar.FitnessAppMero</string>
+	<key>PROJECT_ID</key>
+	<string>getuprun-4d3ff</string>
+	<key>STORAGE_BUCKET</key>
+	<string>getuprun-4d3ff.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:196142343735:ios:04787dcf1730bd0930c1b2</string>
+</dict>
+</plist>

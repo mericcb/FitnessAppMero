@@ -10,6 +10,16 @@
 		C393B6EF2C5687C600B048AD /* PaywallViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C393B6EE2C5687C600B048AD /* PaywallViewModel.swift */; };
 		C393B6F52C56AFB400B048AD /* LeaderboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C393B6F42C56AFB400B048AD /* LeaderboardView.swift */; };
 		C393B6F72C56B51300B048AD /* TermsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C393B6F62C56B51300B048AD /* TermsView.swift */; };
+		C393B6F92C57FE5500B048AD /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C393B6F82C57FE5500B048AD /* GoogleService-Info.plist */; };
+		C393B7352C5802CD00B048AD /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = C393B7342C5802CD00B048AD /* FirebaseAuth */; };
+		C393B7372C5802CD00B048AD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C393B7362C5802CD00B048AD /* FirebaseFirestore */; };
+		C393B7392C5802CD00B048AD /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C393B7382C5802CD00B048AD /* FirebaseFirestoreSwift */; };
+		C393B73B2C5802CD00B048AD /* FirebaseRemoteConfig in Frameworks */ = {isa = PBXBuildFile; productRef = C393B73A2C5802CD00B048AD /* FirebaseRemoteConfig */; };
+		C393B73D2C5802CD00B048AD /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C393B73C2C5802CD00B048AD /* FirebaseRemoteConfigSwift */; };
+		C393B73F2C5802CD00B048AD /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = C393B73E2C5802CD00B048AD /* FirebaseStorage */; };
+		C393B7412C5802CD00B048AD /* FirebaseStorageCombine-Community in Frameworks */ = {isa = PBXBuildFile; productRef = C393B7402C5802CD00B048AD /* FirebaseStorageCombine-Community */; };
+		C393B7432C5802CD00B048AD /* FirebaseVertexAI-Preview in Frameworks */ = {isa = PBXBuildFile; productRef = C393B7422C5802CD00B048AD /* FirebaseVertexAI-Preview */; };
+		C393B7452C58030400B048AD /* DatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C393B7442C58030400B048AD /* DatabaseManager.swift */; };
 		C39568732C4D30AC00564DEC /* FitnessAppMeroApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39568722C4D30AC00564DEC /* FitnessAppMeroApp.swift */; };
 		C39568752C4D30AC00564DEC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39568742C4D30AC00564DEC /* ContentView.swift */; };
 		C39568772C4D30AE00564DEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C39568762C4D30AE00564DEC /* Assets.xcassets */; };
@@ -40,6 +50,8 @@
 		C393B6EE2C5687C600B048AD /* PaywallViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaywallViewModel.swift; sourceTree = "<group>"; };
 		C393B6F42C56AFB400B048AD /* LeaderboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderboardView.swift; sourceTree = "<group>"; };
 		C393B6F62C56B51300B048AD /* TermsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsView.swift; sourceTree = "<group>"; };
+		C393B6F82C57FE5500B048AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C393B7442C58030400B048AD /* DatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseManager.swift; sourceTree = "<group>"; };
 		C395686F2C4D30AC00564DEC /* FitnessAppMero.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessAppMero.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C39568722C4D30AC00564DEC /* FitnessAppMeroApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessAppMeroApp.swift; sourceTree = "<group>"; };
 		C39568742C4D30AC00564DEC /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -72,8 +84,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				C3AC946C2C53CB0900166084 /* RevenueCat in Frameworks */,
+				C393B73D2C5802CD00B048AD /* FirebaseRemoteConfigSwift in Frameworks */,
+				C393B7412C5802CD00B048AD /* FirebaseStorageCombine-Community in Frameworks */,
+				C393B73F2C5802CD00B048AD /* FirebaseStorage in Frameworks */,
 				C3AC94692C53BC7700166084 /* StoreKit.framework in Frameworks */,
 				C3AC946E2C53CB0900166084 /* RevenueCatUI in Frameworks */,
+				C393B73B2C5802CD00B048AD /* FirebaseRemoteConfig in Frameworks */,
+				C393B7372C5802CD00B048AD /* FirebaseFirestore in Frameworks */,
+				C393B7352C5802CD00B048AD /* FirebaseAuth in Frameworks */,
+				C393B7432C5802CD00B048AD /* FirebaseVertexAI-Preview in Frameworks */,
+				C393B7392C5802CD00B048AD /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +160,7 @@
 				C39568882C4E71A200564DEC /* Home */,
 				C39568962C4ECE4A00564DEC /* FitnessAppMero.entitlements */,
 				C39568722C4D30AC00564DEC /* FitnessAppMeroApp.swift */,
+				C393B6F82C57FE5500B048AD /* GoogleService-Info.plist */,
 				C39568762C4D30AE00564DEC /* Assets.xcassets */,
 				C39568782C4D30AE00564DEC /* Preview Content */,
 			);
@@ -200,6 +221,7 @@
 			isa = PBXGroup;
 			children = (
 				C39568982C4ED10300564DEC /* HealthManager.swift */,
+				C393B7442C58030400B048AD /* DatabaseManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -276,6 +298,14 @@
 			packageProductDependencies = (
 				C3AC946B2C53CB0900166084 /* RevenueCat */,
 				C3AC946D2C53CB0900166084 /* RevenueCatUI */,
+				C393B7342C5802CD00B048AD /* FirebaseAuth */,
+				C393B7362C5802CD00B048AD /* FirebaseFirestore */,
+				C393B7382C5802CD00B048AD /* FirebaseFirestoreSwift */,
+				C393B73A2C5802CD00B048AD /* FirebaseRemoteConfig */,
+				C393B73C2C5802CD00B048AD /* FirebaseRemoteConfigSwift */,
+				C393B73E2C5802CD00B048AD /* FirebaseStorage */,
+				C393B7402C5802CD00B048AD /* FirebaseStorageCombine-Community */,
+				C393B7422C5802CD00B048AD /* FirebaseVertexAI-Preview */,
 			);
 			productName = FitnessAppMero;
 			productReference = C395686F2C4D30AC00564DEC /* FitnessAppMero.app */;
@@ -307,6 +337,7 @@
 			mainGroup = C39568662C4D30AC00564DEC;
 			packageReferences = (
 				C3AC946A2C53CB0900166084 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */,
+				C393B7332C5802CD00B048AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = C39568702C4D30AC00564DEC /* Products */;
 			projectDirPath = "";
@@ -323,6 +354,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C395687A2C4D30AE00564DEC /* Preview Assets.xcassets in Resources */,
+				C393B6F92C57FE5500B048AD /* GoogleService-Info.plist in Resources */,
 				C39568772C4D30AE00564DEC /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +371,7 @@
 				C39568852C4E677900564DEC /* FitnessTabView.swift in Sources */,
 				C395688F2C4EC4BA00564DEC /* HomeViewModel.swift in Sources */,
 				C395688C2C4E796700564DEC /* WorkoutCard.swift in Sources */,
+				C393B7452C58030400B048AD /* DatabaseManager.swift in Sources */,
 				C39568872C4E6B9000564DEC /* ProgressCircleView.swift in Sources */,
 				C39568A42C5293CD00564DEC /* ChartDataView.swift in Sources */,
 				C39568812C4E675100564DEC /* HomeView.swift in Sources */,
@@ -569,6 +602,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		C393B7332C5802CD00B048AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.29.0;
+			};
+		};
 		C3AC946A2C53CB0900166084 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/RevenueCat/purchases-ios-spm.git";
@@ -580,6 +621,46 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		C393B7342C5802CD00B048AD /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C393B7332C5802CD00B048AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		C393B7362C5802CD00B048AD /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C393B7332C5802CD00B048AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		C393B7382C5802CD00B048AD /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C393B7332C5802CD00B048AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		C393B73A2C5802CD00B048AD /* FirebaseRemoteConfig */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C393B7332C5802CD00B048AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfig;
+		};
+		C393B73C2C5802CD00B048AD /* FirebaseRemoteConfigSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C393B7332C5802CD00B048AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfigSwift;
+		};
+		C393B73E2C5802CD00B048AD /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C393B7332C5802CD00B048AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+		C393B7402C5802CD00B048AD /* FirebaseStorageCombine-Community */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C393B7332C5802CD00B048AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseStorageCombine-Community";
+		};
+		C393B7422C5802CD00B048AD /* FirebaseVertexAI-Preview */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C393B7332C5802CD00B048AD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = "FirebaseVertexAI-Preview";
+		};
 		C3AC946B2C53CB0900166084 /* RevenueCat */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = C3AC946A2C53CB0900166084 /* XCRemoteSwiftPackageReference "purchases-ios-spm" */;
