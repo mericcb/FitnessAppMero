@@ -19,11 +19,9 @@ class DatabaseManager {
     private init () { }
         let database = Firestore.firestore()
         
-        func fetchLeaderboards() async throws {
-            let snaphot = try await database.collection(weeklyLeaderboard).getDocuments()
-            
-            print(snaphot.documents)
-            print(snaphot.documents.first)
+        func fetchLeaderboards() async throws -> [LeaderboardUser] {
+            let snapshot = try await database.collection(weeklyLeaderboard).getDocuments()
+            return try snapshot.documents.compactMap( { try $0.data(as: LeaderboardUser.self) })
         }
     
     func postStepCountUpdateFor(username: String, count: Int) async throws {

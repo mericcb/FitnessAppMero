@@ -78,13 +78,6 @@ struct LeaderboardView: View {
         .fullScreenCover(isPresented: $showTerms) {
             TermsView()
         }
-        .task {
-            do {
-                try await DatabaseManager.shared.postStepCountUpdateFor(username: "Mero", count: 1111)
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
     }
 }
 
